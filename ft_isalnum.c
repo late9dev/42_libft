@@ -6,7 +6,7 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:13:04 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/08 13:18:04 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/11/09 19:35:21 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 int     ft_isalnum(int c)
 {
-    if (ft_isalpha(c) || ft_isdigit(c))
-    {
-        return (c);
-    }
-    else 
-    {
-        return (0);
-    }
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

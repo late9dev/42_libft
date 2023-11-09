@@ -6,7 +6,7 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:46:41 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 06:58:10 by late9dev         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:49:32 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int		ft_atoi(const char *str);
 int		ft_isspace(int c);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 #endif

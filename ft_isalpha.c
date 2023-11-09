@@ -6,15 +6,11 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:54:30 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 14:59:50 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/11/09 19:31:17 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// c -> valeur ASCII
-// [65;90] -> Uppercase 
-// [97;122] -> Lowercase
 
 int    ft_isalpha(int c)
 {

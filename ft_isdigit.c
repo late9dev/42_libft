@@ -6,22 +6,13 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:04:24 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/08 13:10:46 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/11/09 19:33:09 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// [48;57] -> Digit
-
 int    ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-    {
-        return (c);
-    }
-    else
-    {
-        return (0);
-    }
+    return (c >= '0' && c <= '9');
 }
