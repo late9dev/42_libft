@@ -8,23 +8,23 @@
 - [x] ft_isascii
 - [x] ft_isprint
 - [x] ft_strlen
-- [ ] ft_memset
-- [ ] ft_bzero
-- [ ] ft_memcpy
-- [ ] ft_memmove
-- [ ] ft_strlcpy
-- [ ] ft_strlcat
-- [ ] ft_toupper
-- [ ] ft_tolower
-- [ ] ft_strchr
-- [ ] ft_strrchr
-- [ ] ft_strncmp
-- [ ] ft_memchr
-- [ ] ft_memcmp
-- [ ] ft_strnstr
-- [ ] ft_atoi
-- [ ] ft_calloc
-- [ ] ft_strdup
+- [x] ft_memset
+- [x] ft_bzero
+- [x] ft_memcpy
+- [x] ft_memmove
+- [x] ft_strlcpy
+- [x] ft_strlcat
+- [x] ft_toupper
+- [x] ft_tolower
+- [x] ft_strchr
+- [x] ft_strrchr
+- [x] ft_strncmp
+- [x] ft_memchr
+- [x] ft_memcmp
+- [x] ft_strnstr
+- [x] ft_atoi
+- [x] ft_calloc
+- [x] ft_strdup
 
 ## Partie 2 - Fonctions supplémentaires
 
