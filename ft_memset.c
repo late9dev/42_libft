@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: late9dev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:03:09 by late9dev          #+#    #+#             */
-/*   Updated: 2023/11/09 13:54:51 by lwarlop          ###   ########.fr       */
+/*   Created: 2023/11/09 14:12:54 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/11/09 14:24:57 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,33 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *tmp_ptr;
-	tmp_ptr = (unsigned char *) b;
-	while (len > 0)
+	unsigned char *ptr = b;
+	unsigned long buffer;
+
+	buffer = (unsigned char) c;
+	buffer |= buffer << 8;
+	buffer |= buffer << 16;
+	buffer |= buffer << 32;
+
+	while ((unsigned long) ptr & (sizeof(buffer) - 1) && len)
 	{
-		*(tmp_ptr) = (unsigned char) c;
+		*ptr++ = (unsigned char) c;
 		len--;
 	}
-
+	
+	unsigned long *ptr_long = (unsigned long *)ptr;
+    
+	while (len >= sizeof(buffer))
+    {
+		*ptr_long++ = buffer;
+		len -= sizeof(buffer);
+	}
+	
+	ptr = (unsigned char *)ptr_long;
+	while (len--)
+	{
+		*ptr++ = (unsigned char)c;
+	}
+	
 	return (b);
 }

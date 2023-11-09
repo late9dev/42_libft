@@ -2,7 +2,7 @@
 
 ## Partie obligatoire
 
-- [x] ft_isalpha
+- [x] [🚀] ft_isalpha
 - [x] ft_isdigit
 - [x] ft_isalnum
 - [x] ft_isascii
