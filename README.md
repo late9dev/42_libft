@@ -1,4 +1,4 @@
-# TODO Liste - Projet libft
+# 42 - Projet libft
 
 ## Partie obligatoire
 
