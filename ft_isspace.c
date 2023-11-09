@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
+/*   By: late9dev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:32:46 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 03:02:24 by late9dev         ###   ########.fr       */
+/*   Created: 2023/11/09 06:52:46 by late9dev          #+#    #+#             */
+/*   Updated: 2023/11/09 06:54:15 by late9dev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t     ft_strlen(const char *str)
+int	ft_isspace(int c)
 {
-    size_t i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+	if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
+	{
+		return (1);
+	}
+	return (0);
 }

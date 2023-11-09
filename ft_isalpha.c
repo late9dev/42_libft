@@ -6,11 +6,11 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:54:30 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/08 13:08:54 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/11/08 17:57:28 by late9dev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
 // c -> valeur ASCII
 // [65;90] -> Uppercase 
