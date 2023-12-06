@@ -6,13 +6,13 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:04:24 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 19:33:09 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/12/05 05:45:06 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }

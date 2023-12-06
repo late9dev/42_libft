@@ -6,13 +6,13 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:13:04 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 19:35:21 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/12/05 05:15:51 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

@@ -6,13 +6,13 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:36:28 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/08 11:23:49 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/12/05 05:37:25 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }

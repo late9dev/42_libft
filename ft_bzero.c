@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: late9dev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:03:09 by late9dev          #+#    #+#             */
-/*   Updated: 2023/11/09 01:18:45 by late9dev         ###   ########.fr       */
+/*   Created: 2023/12/05 05:40:05 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/12/05 05:40:23 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *tmp_ptr;
+	char	*tmp_ptr;
+
 	tmp_ptr = (char *) s;
 	while (n > 0)
 	{

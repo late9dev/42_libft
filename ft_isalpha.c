@@ -6,13 +6,13 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:54:30 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 19:31:17 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/12/05 05:34:04 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return ((unsigned int)((c | 32) - 'a') < 26u);
 }

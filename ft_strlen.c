@@ -6,16 +6,18 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:32:46 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/11/09 19:50:36 by lwarlop          ###   ########.fr       */
+/*   Updated: 2023/12/05 05:43:57 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t     ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
