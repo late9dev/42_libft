@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 05:35:39 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/05 05:36:36 by lwarlop          ###   ########.fr       */
+/*   Created: 2023/12/06 09:53:53 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/12/06 14:39:56 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
-	char			cc;
-	char			*res;
+	size_t	i;
+	char	*res;
 
-	cc = (char) c;
 	i = 0;
 	res = NULL;
+	c = (char) c;
 	while (s[i] != '\0')
 	{
-		if (s[i] == cc)
-		{
+		if (s[i] == c)
 			res = (char *) &s[i];
-		}
 		i++;
 	}
-	if (s[i] == cc)
+	if (s[i] == c)
 		res = (char *) &s[i];
 	return (res);
 }

@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:32:46 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/05 05:43:57 by lwarlop          ###   ########.fr       */
+/*   Created: 2023/12/06 09:56:50 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/12/06 12:37:53 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i])
 		i++;
 	return (i);
 }

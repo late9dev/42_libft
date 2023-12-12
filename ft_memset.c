@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 05:09:52 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/05 05:11:04 by lwarlop          ###   ########.fr       */
+/*   Created: 2023/12/12 14:18:25 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/12/12 14:27:57 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	result;
-	int	sign;
-	int	i;
+	unsigned char	*tmp_ptr;
 
-	result = 0;
-	sign = 1;
-	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '+' && str[i + 1] != '-' )
-		i++;
-	if (str[i] == '-')
+	tmp_ptr = (unsigned char *) b;
+	while (len > 0)
 	{
-		sign = -1;
-		i++;
+		*tmp_ptr = (unsigned char) c;
+		tmp_ptr++;
+		len--;
 	}
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		result *= 10;
-		result += str[i] - 48;
-		i++;
-	}
-	result *= sign;
-	return (result);
+	return (b);
 }

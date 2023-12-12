@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 05:40:05 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/05 05:40:23 by lwarlop          ###   ########.fr       */
+/*   Created: 2023/12/12 15:32:06 by lwarlop           #+#    #+#             */
+/*   Updated: 2023/12/12 15:37:30 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*tmp_ptr;
+	char	*tmp_src;
+	size_t	i;
 
-	tmp_ptr = (char *) s;
+	tmp_src = (char *) s;
+	i = 0;
 	while (n > 0)
 	{
-		*(tmp_ptr) = 0;
-		tmp_ptr++;
+		tmp_src[i] = 0;
+		i++;
 		n--;
 	}
 }
