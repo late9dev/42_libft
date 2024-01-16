@@ -1,19 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:46:41 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/13 10:39:32 by lwarlop          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+## Code
 
+```c
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
@@ -52,3 +44,6 @@ void	ft_putendl_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 #endif
+```
+
+> francinette : OK !
