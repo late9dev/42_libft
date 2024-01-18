@@ -6,13 +6,13 @@
 #    By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 14:19:10 by lwarlop           #+#    #+#              #
-#    Updated: 2023/12/13 08:54:21 by lwarlop          ###   ########.fr        #
+#    Updated: 2024/01/18 05:28:24 by lwarlop          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  ft_toupper.c ft_tolower.c \
 	  ft_strchr.c ft_strrchr.c ft_strlen.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c \
 	  ft_memcpy.c ft_memset.c ft_memchr.c ft_memcmp.c ft_memmove.c \
@@ -21,25 +21,22 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  ft_calloc.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
 
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-CCFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-CC = cc
-
-HEADER = libft.h
+CC = gcc
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar -rsc $(NAME) $(OBJS)
 
-main: $(NAME)
-	$(CC) $(CCFLAGS) main.c -L. -lft -o test
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
