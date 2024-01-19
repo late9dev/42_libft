@@ -6,7 +6,7 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 15:32:06 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/12 15:37:30 by lwarlop          ###   ########.fr       */
+/*   Updated: 2024/01/19 02:46:08 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*tmp_src;
-	size_t	i;
-
-	tmp_src = (char *) s;
-	i = 0;
-	while (n > 0)
-	{
-		tmp_src[i] = 0;
-		i++;
-		n--;
-	}
+	ft_memset(s, 0, n);
 }

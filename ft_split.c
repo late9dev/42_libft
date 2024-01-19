@@ -6,7 +6,7 @@
 /*   By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 09:01:57 by lwarlop           #+#    #+#             */
-/*   Updated: 2023/12/13 09:24:18 by lwarlop          ###   ########.fr       */
+/*   Updated: 2024/01/18 11:11:14 by lwarlop          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	word_count(const char *str, char c);
 static char	*fill_word(const char *str, int start, int end);
 static void	*ft_free(char **strs, int count);
-static void	ft_initiate_vars(size_t *i, int *j, int *s_word);
+static void	ft_init_vars(size_t *i, int *j, int *s_word);
 
 char	**ft_split(const char *s, char c)
 {
@@ -24,7 +24,7 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		s_word;
 
-	ft_initiate_vars(&i, &j, &s_word);
+	ft_init_vars(&i, &j, &s_word);
 	res = ft_calloc((word_count(s, c) + 1), sizeof(char *));
 	if (!res)
 		return (NULL);
@@ -45,7 +45,7 @@ char	**ft_split(const char *s, char c)
 	return (res);
 }
 
-static void	ft_initiate_vars(size_t *i, int *j, int *s_word)
+static void	ft_init_vars(size_t *i, int *j, int *s_word)
 {
 	*i = 0;
 	*j = 0;
