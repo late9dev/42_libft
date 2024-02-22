@@ -6,40 +6,57 @@
 #    By: lwarlop <lwarlop@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 14:19:10 by lwarlop           #+#    #+#              #
-#    Updated: 2024/01/18 05:28:24 by lwarlop          ###   ########.fr        #
+#    Updated: 2024/02/22 01:03:18 by lwarlop          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME		=	libft.a
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-	  ft_toupper.c ft_tolower.c \
-	  ft_strchr.c ft_strrchr.c ft_strlen.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c \
-	  ft_memcpy.c ft_memset.c ft_memchr.c ft_memcmp.c ft_memmove.c \
-	  ft_bzero.c \
-	  ft_atoi.c ft_itoa.c ft_split.c \
-	  ft_calloc.c \
-	  ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c
+SRCS_DIR	=	src/
+OBJS_DIR	=	obj/
 
-OBJS = $(SRCS:.c=.o)
+CC		=	cc
+CFLAGS		=	-Wall -Wextra -Werror
 
-CFLAGS = -Wall -Wextra -Werror
+RMFLAGS		=	rm -rf
+ARFLAGS		=	ar -rcs
 
-CC = gcc
+SUB_DIRS	=	ft_is/ ft_to/ ft_str/ ft_mem/ ft_put/ ft_ext/ ft_print/ ft_len/
 
-all: $(NAME)
+SRCS		=	$(foreach dir,$(SUB_DIRS),$(wildcard $(SRCS_DIR)$(dir)*.c))
 
-$(NAME): $(OBJS)
-	ar -rsc $(NAME) $(OBJS)
+TOTAL_FILES	:=	$(words $(SRCS))
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+OBJS		=	$(SRCS:$(SRCS_DIR)%.c=$(OBJS_DIR)%.o)
+
+RESET = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+YELLOW = \033[0;93m
+BLUE = \033[0;94m
+MAGENTA = \033[0;95m
+CYAN = \033[0;96m
+WHITE = \033[0;97m
+
+all:		$(NAME)
+
+$(NAME):	$(OBJS)
+	@$(ARFLAGS) $(NAME) $(OBJS)
+	@echo "$(CYAN) LIBFT $(RESET)\t : $(GREEN) COMPILED ($(TOTAL_FILES) files) $(RESET)"
+
+$(OBJS_DIR)%.o: $(SRCS_DIR)%.c
+	@mkdir -p $(@D)
+	@echo "$(CYAN) LIBFT $(RESET)\t : $(YELLOW) Compiling $< $(RESET)"
+	@$(CC) $(CFLAGS) -I. -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	@$(RMFLAGS) $(OBJS_DIR)
+	@echo "$(CYAN) LIBFT $(RESET)\t : $(RED) CLEAN $(RESET)"
 
 fclean: clean
-	rm -f $(NAME)
+	@$(RM) $(NAME)
+	@echo "$(CYAN) LIBFT $(RESET)\t : $(RED) FULL CLEAN $(RESET)"
 
 re: fclean all
 
