@@ -1,5 +1,5 @@
-<h1 style="opacity: 0; position: absolute;">
-	42 ft_printf
+<h1 hidden>
+	42 libft
 </h1>
 
 <p align="center">
@@ -60,7 +60,7 @@ int	main(void)
 ### Compile & run
 
 ```bash
-gcc -Wall -Wextra -Werror test.c -o test -L. && ./test
+gcc -Wall -Wextra -Werror test.c -o test -L. -lft && ./test
 ```
 
 ## Test
@@ -68,6 +68,12 @@ gcc -Wall -Wextra -Werror test.c -o test -L. && ./test
 I passed all the mandatory [Francinette](https://github.com/xicodomingues/francinette) tests.
 
 <img src="./ressources/libft_francinette_tests.png" alt="Francinette printf tests passed">
+
+<img src="./ressources/libft_francinette_tests_2.png" alt="Francinette printf tests passed">
+
+<img src="./ressources/libft_francinette_tests_3.png" alt="Francinette printf tests passed">
+
+<img src="./ressources/libft_francinette_tests_4.png" alt="Francinette printf tests passed">
 
 ---
 
