@@ -1,12 +1,10 @@
-<h1 hidden>
-	42 libft
-</h1>
+<h1 align="center" style="display: none">42 libft</h1>
 
-<p align="center">
-  <a href="https://42.fr">
-  <img src="./ressources/dark_banner_libft.png" alt="readme banner libft">
-  </a>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./ressources/github-readme-banner-libft-light.png">
+  <source media="(prefers-color-scheme: light)" srcset="./ressources/github-readme-banner-libft-dark.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="./ressources/github-readme-banner-libft-color.png">
+</picture>
 
 <p align="center">
 	<b>
