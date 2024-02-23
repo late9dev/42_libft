@@ -1,4 +1,5 @@
-<h1 align="center" style="visibility: hidden">42 libft</h1>
+
+<h1 align="center">42 libft</h1>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./ressources/github-readme-banner-libft-light.png">
